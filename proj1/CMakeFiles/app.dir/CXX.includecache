@@ -6,11 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/raz/Documents/IEP/Teme-IEP/proj1/main.cpp
+/home/daiana/Desktop/IEP/Teme-IEP/proj1/main.cpp
 iostream
 -
 string
 -
 stdio.h
+-
+vector
 -
 
