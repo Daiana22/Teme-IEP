@@ -16,12 +16,9 @@ class Pasager  {
         }
 };
 
-
 Pasager::Pasager(string numePasager, string clasa) :
 numePasager(numePasager),
 clasa(clasa) { cout << "Tocmai am creat pasagerul " << numePasager <<endl;}
-
-
 
 class Avion {
     public:
@@ -43,6 +40,10 @@ class Avion {
         }
 
         ~Avion() { }
+    private:
+        Avion(const Avion&);
+        Avion& operator=(const Avion&);
+
 };
 
 class AvionDeCalatori : public Avion{
@@ -102,7 +103,6 @@ class AvionDeLupta : public Avion {
             
         }
 };
-
 
 
 #endif

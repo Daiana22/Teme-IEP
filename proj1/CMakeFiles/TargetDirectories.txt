@@ -1,7 +1,7 @@
-/home/raz/Documents/IEP/Teme-IEP/proj1/CMakeFiles/install/strip.dir
-/home/raz/Documents/IEP/Teme-IEP/proj1/CMakeFiles/install/local.dir
-/home/raz/Documents/IEP/Teme-IEP/proj1/CMakeFiles/install.dir
-/home/raz/Documents/IEP/Teme-IEP/proj1/CMakeFiles/list_install_components.dir
-/home/raz/Documents/IEP/Teme-IEP/proj1/CMakeFiles/rebuild_cache.dir
-/home/raz/Documents/IEP/Teme-IEP/proj1/CMakeFiles/edit_cache.dir
-/home/raz/Documents/IEP/Teme-IEP/proj1/CMakeFiles/app.dir
+/home/daiana/Desktop/IEP-teme/Teme-IEP/proj1/CMakeFiles/install/strip.dir
+/home/daiana/Desktop/IEP-teme/Teme-IEP/proj1/CMakeFiles/install/local.dir
+/home/daiana/Desktop/IEP-teme/Teme-IEP/proj1/CMakeFiles/install.dir
+/home/daiana/Desktop/IEP-teme/Teme-IEP/proj1/CMakeFiles/list_install_components.dir
+/home/daiana/Desktop/IEP-teme/Teme-IEP/proj1/CMakeFiles/rebuild_cache.dir
+/home/daiana/Desktop/IEP-teme/Teme-IEP/proj1/CMakeFiles/edit_cache.dir
+/home/daiana/Desktop/IEP-teme/Teme-IEP/proj1/CMakeFiles/app.dir
