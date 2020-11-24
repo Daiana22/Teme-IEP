@@ -2,24 +2,40 @@
 #ifndef TYPE_DEFINE_H
 #define TYPE_DEFINE_H
 
+#include <iostream>
 
 class Pasager  {
     private:
         string numePasager;
         string clasa;//economic,business,intai
     public:
+
+        int casru;
         Pasager(string numePasager, string clasa);
+        Pasager() {}
+        Pasager& operator-=(const Pasager& rhs) { 
+            this->numePasager = rhs.numePasager;
+            this->clasa = rhs.clasa;
+            this->casru = rhs.casru - 2;
+            return *this; }
+        Pasager& operator=(const Pasager& rhs) { 
+            this->numePasager = rhs.numePasager;
+            this->clasa = rhs.clasa;
+            this->casru = rhs.casru;
+            return *this; }
 
         ~Pasager() {}
         void print() {
-             cout << numePasager << " la clasa " << clasa;
+             cout << numePasager << " la clasa " << clasa << " si " << casru;
         }
 };
 
 
 Pasager::Pasager(string numePasager, string clasa) :
 numePasager(numePasager),
-clasa(clasa) { cout << "Tocmai am creat pasagerul " << numePasager <<endl;}
+clasa(clasa) { 
+    casru = 10;
+    cout << "Tocmai am creat pasagerul " << numePasager <<endl;}
 
 
 
