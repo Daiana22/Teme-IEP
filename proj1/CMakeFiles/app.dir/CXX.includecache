@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/raz/Documents/IEP/Teme-IEP/proj1/Type_Define.hpp
+/home/daiana/Desktop/IEP-teme/Teme-IEP/proj1/Type_Define.hpp
 
-/home/raz/Documents/IEP/Teme-IEP/proj1/main.cpp
+/home/daiana/Desktop/IEP-teme/Teme-IEP/proj1/main.cpp
 iostream
 -
 string
@@ -18,5 +18,5 @@ stdio.h
 vector
 -
 Type_Define.hpp
-/home/raz/Documents/IEP/Teme-IEP/proj1/Type_Define.hpp
+/home/daiana/Desktop/IEP-teme/Teme-IEP/proj1/Type_Define.hpp
 
