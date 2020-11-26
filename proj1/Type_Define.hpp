@@ -38,13 +38,18 @@ casru(10) {
     cout << "Tocmai am creat pasagerul " << numePasager <<endl;}
 
 class Avion {
+    private:
+        int dimensiune;
     public:
         string idAvion;
         int putereMotor;
+
         Avion(string idAvion, int putereMotor):
+        dimensiune(100),
         idAvion(idAvion),
-        putereMotor(putereMotor) {}
-        Avion(){};//default 
+        putereMotor(putereMotor) {}//initializare constr
+        Avion(){};//default constr
+
         virtual string toString() {
             return idAvion + " " + to_string(putereMotor) + "\n";
         }
@@ -94,6 +99,7 @@ class AvionDeCalatori : public Avion{
             }
             cout << "Locuri ramase: " << nrMaxPasageri << endl;
         }
+
 };
 
 class AvionDeLupta : public Avion {
