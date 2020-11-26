@@ -9,14 +9,14 @@ using namespace std;
 
 
 int main() {
-    Avion a1;//generates default constr + destructor
+    Avion avio;//generates default constr + destructor
     Avion a("general",1200);
 
     AvionDeCalatori aCalatori("wizzer",2000);
     AvionDeLupta aLupta("boeing",2500);
     
 
-    //Item 10
+    //Item 10 & 11
     Pasager p5("daiana","intai");
    
     Pasager p66;
@@ -28,6 +28,7 @@ int main() {
     cout << "p6 arata spre adresa: " << p6 << endl;
     cout << "p5 este la adresa: " <<  &p5  << " ; p6 este la adresa: " << &p6 << "\n\n\n\n";
     p66.operator=(p7.operator=(p5));
+    // p66 = p7 = p5;
     p5.print(); cout << " : " << &p5 << endl;
     p66.print(); cout << " : " << &p6 << endl;
     p7.print(); cout << " : " << &p7 << "\n\n\n";
@@ -37,15 +38,28 @@ int main() {
     Pasager a2;
     Pasager a3("maria", "doi");
 
-   // a1.operator-=(a2.operator-=(a3));
-    /*a1 -= a2 -= a3;
+    a1.operator-=(a2.operator-=(a3));
+    //*a1 -= a2 -= a3;
    a3.print(); cout << " : " << &a3 << endl;
     a2.print(); cout << " : " << &a2 << endl;
-    a1.print(); cout << " : " << &a1 << "\n\n\n";*/
+    a1.print(); cout << " : " << &a1 << "\n\n\n";
 
-    
+    // Item 12
+    Bilet b1(20);
+    Bilet b2;
+    Bilet b3(b1);
 
+    BiletBonus bb1(55, 20);
+    BiletBonus bb2;
+    BiletBonus bb3(bb1);
 
+    bb3.print();
+    bb2.print();
+
+    bb2 = bb3;
+
+    bb3.print();
+    bb2.print();
 
     return 0;
 }
