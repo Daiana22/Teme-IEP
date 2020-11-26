@@ -27,15 +27,12 @@ class Pasager  {
             casru(10) { 
             cout << "Tocmai am creat pasagerul " << numePasager <<endl;}//parameterized constr
         Pasager() {}//default constr
-        Pasager& operator-=(Pasager& rhs) {//transmis prin valoare 
+        Pasager& operator-=(Pasager rhs) {//transmis prin valoare 
             this->numePasager = rhs.numePasager;
             this->clasa = rhs.clasa;
             this->casru = rhs.casru - 2;
             return *this; }
-        Pasager& operator=(Pasager& rhs) { //transmis prin valoare
-
-            
-
+        Pasager& operator=(Pasager rhs) { //transmis prin valoare
             this->numePasager = rhs.numePasager;
             this->clasa = rhs.clasa;
             this->casru = rhs.casru;
