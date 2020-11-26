@@ -7,6 +7,10 @@
 #IncludeRegexTransform: 
 
 /home/daiana/Desktop/IEP-teme/Teme-IEP/proj1/Type_Define.hpp
+iostream
+-
+string.h
+-
 
 /home/daiana/Desktop/IEP-teme/Teme-IEP/proj1/main.cpp
 iostream

@@ -3,6 +3,7 @@
 #define TYPE_DEFINE_H
 
 #include <iostream>
+#include <string.h>
 
 class Pasager  {
     private:
@@ -12,13 +13,13 @@ class Pasager  {
 
         int casru;
         Pasager(string numePasager, string clasa);
-        Pasager() {}
-        Pasager& operator-=(const Pasager& rhs) { 
+        Pasager() {}//constr default
+        Pasager& operator-=(Pasager rhs) {//transmis prin valoare 
             this->numePasager = rhs.numePasager;
             this->clasa = rhs.clasa;
-            this->casru = rhs.casru - 2;
+            this->casru = rhs.casru - 2;//case dar nu case
             return *this; }
-        Pasager& operator=(const Pasager& rhs) { 
+        Pasager& operator=(Pasager rhs) { //transmis prin valoare
             this->numePasager = rhs.numePasager;
             this->clasa = rhs.clasa;
             this->casru = rhs.casru;
@@ -30,10 +31,10 @@ class Pasager  {
         }
 };
 
-Pasager::Pasager(string numePasager, string clasa) :
+Pasager::Pasager(string numePasager, string clasa) : //initializare constr
 numePasager(numePasager),
-clasa(clasa) { 
-    casru = 10;
+clasa(clasa),
+casru(10) { 
     cout << "Tocmai am creat pasagerul " << numePasager <<endl;}
 
 class Avion {
@@ -57,7 +58,7 @@ class Avion {
 
         ~Avion() { }
     private:
-        Avion(const Avion&);
+        Avion(const Avion&);//copy constr
         Avion& operator=(const Avion&);
 
 };
@@ -69,8 +70,7 @@ class AvionDeCalatori : public Avion{
         vector<Pasager> pasageri;
         AvionDeCalatori(string idAvion, int putereMotor) :
         Avion::Avion(idAvion, putereMotor),
-        
-        nrMaxPasageri(12){}
+        nrMaxPasageri(12){}//initializare constructor
 
         void adaugaPasageri(Pasager p){
             if(nrMaxPasageri > 0){
@@ -119,6 +119,5 @@ class AvionDeLupta : public Avion {
             
         }
 };
-
 
 #endif

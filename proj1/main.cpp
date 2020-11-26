@@ -9,8 +9,12 @@ using namespace std;
 
 
 int main() {
-
+    Avion a("general",1200);
+    AvionDeCalatori aCalatori("wizzer",2000);
+    AvionDeLupta aLupta("boeing",2500);
     
+
+    //Item 10
     Pasager p5("daiana","intai");
    
     Pasager p66;
@@ -36,5 +40,10 @@ int main() {
    a3.print(); cout << " : " << &a3 << endl;
     a2.print(); cout << " : " << &a2 << endl;
     a1.print(); cout << " : " << &a1 << "\n\n\n";
+
+    
+
+
+
     return 0;
 }
