@@ -9,7 +9,9 @@ using namespace std;
 
 
 int main() {
+    Avion a1;//generates default constr + destructor
     Avion a("general",1200);
+
     AvionDeCalatori aCalatori("wizzer",2000);
     AvionDeLupta aLupta("boeing",2500);
     
@@ -36,10 +38,10 @@ int main() {
     Pasager a3("maria", "doi");
 
    // a1.operator-=(a2.operator-=(a3));
-    a1 -= a2 -= a3;
+    /*a1 -= a2 -= a3;
    a3.print(); cout << " : " << &a3 << endl;
     a2.print(); cout << " : " << &a2 << endl;
-    a1.print(); cout << " : " << &a1 << "\n\n\n";
+    a1.print(); cout << " : " << &a1 << "\n\n\n";*/
 
     
 

@@ -12,12 +12,12 @@ class Pasager  {
     public:
 
         int casru;
-        Pasager(string numePasager, string clasa);
-        Pasager() {}//constr default
+        Pasager(string numePasager, string clasa);//parameterized constr
+        Pasager() {}//default constr
         Pasager& operator-=(Pasager rhs) {//transmis prin valoare 
             this->numePasager = rhs.numePasager;
             this->clasa = rhs.clasa;
-            this->casru = rhs.casru - 2;//case dar nu case
+            this->casru = rhs.casru - 2;
             return *this; }
         Pasager& operator=(Pasager rhs) { //transmis prin valoare
             this->numePasager = rhs.numePasager;
@@ -25,7 +25,7 @@ class Pasager  {
             this->casru = rhs.casru;
             return *this; }
 
-        ~Pasager() {}
+        ~Pasager() {}//destructor
         void print() {
              cout << numePasager << " la clasa " << clasa << " si " << casru;
         }
@@ -44,7 +44,7 @@ class Avion {
         Avion(string idAvion, int putereMotor):
         idAvion(idAvion),
         putereMotor(putereMotor) {}
-        
+        Avion(){};//default 
         virtual string toString() {
             return idAvion + " " + to_string(putereMotor) + "\n";
         }
@@ -57,9 +57,9 @@ class Avion {
         }
 
         ~Avion() { }
-    private:
+    private://declared private so that we don't make copies of an object we don't want copies of
         Avion(const Avion&);//copy constr
-        Avion& operator=(const Avion&);
+        Avion& operator=(const Avion&);//assignment operator
 
 };
 
