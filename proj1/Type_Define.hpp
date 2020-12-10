@@ -153,7 +153,7 @@ class Bilet {
             cout << "Copy constructor called" << endl;
         }
 
-        Bilet* createBilet() {
+        static Bilet* createBilet() {
             return new Bilet();
         }
 
@@ -213,7 +213,32 @@ class BiletBonus : public Bilet {
 
 };
 
+class BiletManagement  {
+    public:
+        Bilet* pBilet;
+        void invalidare(Bilet* pb) {
+                cout  << "Biletul " << pb->pret << " a fost invalidat\n";
+        }
+        void validare(Bilet* pb) {
+                cout << "Biletul " << pb->pret << " a fost validat\n";
+        }
 
+
+        BiletManagement(Bilet* pb) :
+        pBilet(pb) {
+            validare(pBilet);
+        }
+
+        ~BiletManagement(){
+            invalidare(pBilet);
+        }
+
+    private://declared private so that we don't make copies of an object we don't want copies of
+        BiletManagement(const BiletManagement&);//copy constr
+        BiletManagement& operator=(const BiletManagement&);//assignment operator
+
+    
+};
 
 
 #endif

@@ -46,5 +46,12 @@ int main() {
     cout << "Pret dupa delete: " << pretBilet << endl;
     //cout << "Pointerul din afara functiei este la adresa: " << &pBilet << " si arata spre: " << pBilet  << endl;
   
+    Bilet b2(150);
+
+    BiletManagement bm(&b2);
+    b2.pret = 100;
+
+   // BiletManagement bm2(&bm);
+   // nu poate fi accesat copy-constructorul pentru ca e private
     return 0;
 }
