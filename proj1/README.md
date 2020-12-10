@@ -19,3 +19,10 @@ Item 10: Have assignment operators return a reference to *this.
 Item 11: Handle assignment to self in operator=.
 
 Item 12: Copy all parts of an object.
+
+
+# Tema 3
+
+Item 13: Use objects to manage resources.
+
+Item 14: Think carefully about copying behavior in resource-managing classes.
