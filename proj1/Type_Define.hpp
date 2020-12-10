@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include <string.h>
-
+#include <memory>
 class Test {
     public:
         string text;
@@ -51,6 +51,7 @@ class Avion {
     public:
         string idAvion;
         int putereMotor;
+
 
         Avion(string idAvion, int putereMotor):
         dimensiune(100),
@@ -137,25 +138,49 @@ class AvionDeLupta : public Avion {
 
 class Bilet {
     private:
-        int pret;
     public:
+        int pret;
         Bilet() :
         pret(100) {}
+
         Bilet(int pret) : 
         pret(pret) {}
+
+
         Bilet(const Bilet& rhs) :
         pret(rhs.pret)
         {
             cout << "Copy constructor called" << endl;
         }
+
+        Bilet* createBilet() {
+            return new Bilet();
+        }
+
         Bilet& operator=(Bilet& rhs) { 
             cout << "operator= called" << endl;
             this->pret = rhs.pret;
             return *this; 
         }
+        void setPret(int p){
+            pret = p;
+        }
         void print () {
             cout << "Pret: " << pret << endl;
         }
+
+        int doSmth(){
+            shared_ptr<Bilet> pBilet(createBilet());
+            cout << "Pointerul din functie este la adresa: " << &pBilet << " si arata spre: " << pBilet << endl;
+            cout << "Pret inainte de delete: " << pBilet->pret << endl;
+            if (pBilet->pret == 100) {
+                pBilet->pret = 50;
+                return pBilet->pret;
+            }
+            // delete pBilet;
+            return pBilet->pret;
+        }
+
 };
 
 class BiletBonus : public Bilet {
@@ -187,6 +212,8 @@ class BiletBonus : public Bilet {
 
 
 };
+
+
 
 
 #endif
